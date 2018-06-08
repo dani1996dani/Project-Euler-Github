@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Project Euler: Problem 4</title>
+
+<script>
+	var biggestPalindrome = 0;
+	var str1 = "";
+	var str2 = "";
+	var reveresed_arr=[];
+	for(var i=100;i<1000;i++)
+	{
+		for(var j=100;j<1000;j++)
+			{
+				var tempProduct = i*j;
+				str1 = tempProduct.toString();
+				str2 = reverseString(str1);
+				if(str1 == str2 && tempProduct>biggestPalindrome)
+					biggestPalindrome = tempProduct;
+				
+			}
+	}
+	
+	function reverseString(str){
+		reveresed_arr = str.split("");
+		reveresed_arr.reverse();
+		return (reveresed_arr.join(""));
+	}
+	alert(biggestPalindrome);
+	
+	</script>
+</head>
+
+<body>
+<h1>Project Euler: Problem 4</h1>
+<p>
+
+A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+
+</p>
+<p>
+Find the largest palindrome made from the product of two 3-digit numbers.</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Project Euler: Problem 9</title>
+
+<script>
+
+	function init(){
+	for(var a=0;a<1000/3;a++){
+		for(var b=0;b<1000/2;b++){
+			
+			var c = 1000 - a -b;
+			
+			if(c*c == (a*a + b*b) && (a+b+c==1000))
+			{
+				alert(a*b*c);
+				
+			}
+		}
+		
+	}
+		}
+	
+	</script>
+	
+</head>
+
+<body onLoad="init()">
+<h1>Project Euler: Problem 9</h1>
+<a href="https://projecteuler.net/problem=9" target="_blank">Link to problem</a>
+</body>
+</html>

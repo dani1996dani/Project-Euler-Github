@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Project Euler: Problem 3</title>
+
+<script>
+
+	var number = 600851475143;
+	var smallestFactor = 2;
+	
+	function isPrime(num){
+		for(var i=2;i<num;i++){
+			if(num%i==0)
+				{
+					return false;
+				}
+		}
+		return true;
+	}
+	
+	function divide(num){
+		while(num%smallestFactor !=0)
+			{
+				smallestFactor++;
+			}
+		alert(smallestFactor);
+		return num/smallestFactor;
+	}
+	
+	var checkNumber = isPrime(number);
+	while(!checkNumber)
+		{
+			number = divide(number);
+			checkNumber = isPrime(number);
+			
+		}
+	alert(number);
+	</script>
+</head>
+
+<body>
+<h1>Project Euler: Problem 3</h1>
+<p>What is the largest prime factor of the number 600851475143 ?</p>
+</body>
+</html>

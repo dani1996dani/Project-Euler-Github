@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<script>
+	
+	var currDivider = 1;  // for numOfDividers
+	var countDivider = 0; // for numOfDividers
+	var mainIndex = 1;
+	var mainValueOfIndex = 0;
+	
+	function init(){
+	//alert(numOfDividers(28));
+		//countDivider = 0;
+	//alert(numOfDividers(28));
+		mainValueOfIndex = addNumbersUp(mainIndex);
+		while(numOfDividers(mainValueOfIndex)<5)
+			{
+				countDivider = 0;
+				mainIndex++;
+				mainValueOfIndex = addNumbersUp(mainIndex);
+				var str=mainIndex +", " + mainValueOfIndex;
+				//alert(str);
+				alert(numOfDividers(3));
+				//alert(numOfDividers(mainValueOfIndex));
+				//alert(currDivider);
+			}
+		//alert(mainValueOfIndex);
+	}
+	
+	function numOfDividers(num){
+		
+		if(currDivider>num)
+			{
+				currDivider=0;
+			return countDivider;
+		}
+		else if(currDivider==num)
+			{
+				currDivider=0;
+			return ++countDivider;
+		}
+		else{
+			if(num%currDivider==0)
+				countDivider++;
+			currDivider++;
+			return numOfDividers(num);
+			
+		}
+			
+	}
+	
+	function addNumbersUp(index){
+		if(index==0)
+			return 0;
+		if(index==1)
+			return 1;
+		else
+			return addNumbersUp(index-1) + index;
+	}
+	</script>
+
+
+</head>
+
+<body onload="init()">
+
+</body>
+</html>

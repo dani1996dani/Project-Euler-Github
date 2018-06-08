@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Project Euler: Problem 2</title>
+
+<script>
+	var first=1;
+	var second=2;
+	var first_plus_second = 0;
+	var sumOfEvenNumbers = 0;
+	
+	while(second<4000000)
+		{
+			if(second%2==0)
+				{
+					sumOfEvenNumbers +=second;
+				}
+			first_plus_second = first+second;
+			first = second;
+			second = first_plus_second;
+		}
+	alert(sumOfEvenNumbers);
+	</script>
+</head>
+
+<body>
+<h1>Project Euler: Problem 2</h1>
+</body>
+</html>

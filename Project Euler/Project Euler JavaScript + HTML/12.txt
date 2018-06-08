@@ -1,0 +1,19 @@
+
+// function NumberOfDividers
+1.get num in function
+2.check if divider is bigger than num, if so, exit function
+3.if not, check if num is divided by divider.
+4.if yes, add one to counter of dividers, if not, do nothing about it.
+5.add one to divider, and repeat.
+//
+
+//function addNumbers
+1.get num in function.
+2.if num = 0 return 0.
+3.else send back (num-1) and add 1 to it.
+
+//general function
+1.start from index 1
+2.check for value of index, how many dividers it has
+3.if it has over 500 dividers, reutrn the value of index.
+4.if not add 1 to index, and repeat from step 2.

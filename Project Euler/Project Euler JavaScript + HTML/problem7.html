@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Project Euler: Problem 7</title>
+
+<script>
+
+	var counter = 0;
+	var number = 2;
+	var indexOfPrimary = 10001;
+	
+	while(counter<indexOfPrimary)
+		{
+			
+			if(isPrime(number))
+				{
+					counter++;
+				}
+			if(counter<indexOfPrimary)
+			number++;
+		}
+	alert(number);
+		
+		function isPrime(checkNum)
+			{
+				for(var i=2;i<checkNum;i++)
+					{
+						if(checkNum%i==0)
+							{
+								return false;
+								
+							}
+					}
+				return true;
+			}
+	
+	</script>
+</head>
+
+<body>
+<h1>Project Euler: Problem 7</h1>
+<a href="https://projecteuler.net/problem=7" target="_blank">Link to problem</a>
+</body>
+</html>
+
